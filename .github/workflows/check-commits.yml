@@ -5,5 +5,5 @@ on:
     types: [opened, reopened, unlabeled, synchronize]
 
 jobs:
-  check-commits:
+  action:
     uses: AlaskaAirlines/auro-actions/.github/workflows/check-commits.yml@main

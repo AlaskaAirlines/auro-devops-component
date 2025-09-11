@@ -8,7 +8,7 @@ on:
       - 'main'
 
 jobs:
-  pr-workflow:
+  action:
     uses: AlaskaAirlines/auro-actions/.github/workflows/pull-request.yml@main
     secrets:
       AURO_SURGE_TOKEN: ${{ secrets.AURO_SURGE_TOKEN }}
