@@ -855,6 +855,7 @@ export class AuroSlideshow extends LitElement {
   }
 
   render() {
+    console.warn("Random console log to test CI pipeline");
     return html`
       <div class="container">
         <div class="slideshow-wrapper">
