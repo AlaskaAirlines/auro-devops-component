@@ -7,5 +7,5 @@ on:
   pull_request:
 
 jobs:
-  dev-demo:
-    uses: AlaskaAirlines/auro-actions/workflows/dev-demo.yml@main
+  action:
+    uses: AlaskaAirlines/auro-actions/.github/workflows/dev-demo.yml@main

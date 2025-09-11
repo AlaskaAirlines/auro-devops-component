@@ -7,5 +7,5 @@ on:
     types: [labeled, unlabeled, opened, synchronize, reopened]
 
 jobs:
-  review-policy:
-    uses: AlaskaAirlines/auro-actions/workflows/check-pr.yml@main
+  action:
+    uses: AlaskaAirlines/auro-actions/.github/workflows/check-pr.yml@main

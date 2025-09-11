@@ -8,5 +8,10 @@ on:
       - 'main'
 
 jobs:
-  pr-workflow:
-    uses: AlaskaAirlines/auro-actions/workflows/pull-request.yml@main
+  action:
+    uses: AlaskaAirlines/auro-actions/.github/workflows/pull-request.yml@main
+    with:
+      component: 'devops-component'
+    secrets:
+      AURO_SURGE_TOKEN: ${{ secrets.AURO_SURGE_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

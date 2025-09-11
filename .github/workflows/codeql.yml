@@ -7,5 +7,5 @@ on:
     branches: ["main"]
 
 jobs:
-  codeql:
-    uses: AlaskaAirlines/auro-actions/workflows/codeql.yml@main
+  action:
+    uses: AlaskaAirlines/auro-actions/.github/workflows/codeql.yml@main

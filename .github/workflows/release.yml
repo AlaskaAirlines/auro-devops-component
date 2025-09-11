@@ -7,5 +7,7 @@ on:
       - 'main'
 
 jobs:
-  release:
-    uses: AlaskaAirlines/auro-actions/workflows/release.yml@main
+  action:
+    uses: AlaskaAirlines/auro-actions/.github/workflows/release.yml@main
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
