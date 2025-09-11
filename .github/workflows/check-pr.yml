@@ -8,4 +8,4 @@ on:
 
 jobs:
   review-policy:
-    uses: AlaskaAirlines/auro-actions/workflows/check-pr.yml@main
+    uses: AlaskaAirlines/auro-actions/.github/workflows/check-pr.yml@main

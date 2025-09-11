@@ -8,4 +8,4 @@ on:
 
 jobs:
   release:
-    uses: AlaskaAirlines/auro-actions/workflows/release.yml@main
+    uses: AlaskaAirlines/auro-actions/.github/workflows/release.yml@main

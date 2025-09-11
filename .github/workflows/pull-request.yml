@@ -9,4 +9,4 @@ on:
 
 jobs:
   pr-workflow:
-    uses: AlaskaAirlines/auro-actions/workflows/pull-request.yml@main
+    uses: AlaskaAirlines/auro-actions/.github/workflows/pull-request.yml@main

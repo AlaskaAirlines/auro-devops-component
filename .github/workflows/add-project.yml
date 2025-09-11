@@ -7,4 +7,4 @@ on:
 
 jobs:
   add-project:
-    uses: AlaskaAirlines/auro-actions/workflows/add-project.yml@main
+    uses: AlaskaAirlines/auro-actions/.github/workflows/add-project.yml@main

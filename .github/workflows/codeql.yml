@@ -8,4 +8,4 @@ on:
 
 jobs:
   codeql:
-    uses: AlaskaAirlines/auro-actions/workflows/codeql.yml@main
+    uses: AlaskaAirlines/auro-actions/.github/workflows/codeql.yml@main
