@@ -17,7 +17,7 @@ The following sections are editable by making changes to the following files:
 | Component Example Code | HTML sample code of the components use            | `./apiExamples/basic.html`          |
 -->
 
-# Slideshow
+# Auro devops tester
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/description.md) -->
 <!-- The below content is automatically added from ./docs/partials/description.md -->

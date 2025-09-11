@@ -6,12 +6,12 @@
     "  2. Go to http://localhost:8000",
     "================================================================================"
   ],
-  "name": "@aurodesignsystem/auro-slideshow",
+  "name": "@aurodesignsystem/auro-devops-component",
   "version": "0.0.0",
-  "description": "auro-slideshow HTML custom element",
+  "description": "Testing component based on an old version of auro-slideshow. Not intended to be used in other projects.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/auro-slideshow"
+    "url": "https://github.com/AlaskaAirlines/auro-devops-component"
   },
   "type": "module",
   "main": "index.js",
