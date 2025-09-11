@@ -6,5 +6,4 @@ on:
 
 jobs:
   check-commits:
-    name: Check Commits
     uses: AlaskaAirlines/auro-actions/.github/workflows/check-commits.yml@main
