@@ -7,13 +7,6 @@ on:
       - 'rc/**'
       - 'main'
 
-permissions:
-  id-token: write  # required for OIDC (npm provenance)
-  contents: read
-  deployments: write
-  issues: write
-  pull-requests: write
-
 jobs:
   action:
     uses: AlaskaAirlines/auro-actions/.github/workflows/pull-request.yml@dev
