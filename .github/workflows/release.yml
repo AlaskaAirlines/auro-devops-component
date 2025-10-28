@@ -6,6 +6,9 @@ on:
       - 'rc/**'
       - 'main'
 
+permissions:
+  id-token: write 
+
 jobs:
   action:
     uses: AlaskaAirlines/auro-actions/.github/workflows/release.yml@dev
