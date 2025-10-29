@@ -10,5 +10,7 @@ on:
 jobs:
   action:
     uses: AlaskaAirlines/auro-actions/.github/workflows/pull-request.yml@dev
-    secrets: 
+    with:
+      component: 'devops-component'
+    secrets:
       AURO_SURGE_TOKEN: ${{ secrets.AURO_SURGE_TOKEN }}
