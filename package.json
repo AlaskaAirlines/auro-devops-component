@@ -11,10 +11,11 @@
   "description": "Testing component based on an old version of auro-slideshow. Not intended to be used in other projects.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlaskaAirlines/auro-devops-component"
+    "url": "https://github.com/AlaskaAirlines/auro-devops-component"
   },
   "type": "module",
-  "main": "index.js",
+  "main": "dist/registered.js",
+  "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "engines": {
     "node": "^20.x || ^22.x"
