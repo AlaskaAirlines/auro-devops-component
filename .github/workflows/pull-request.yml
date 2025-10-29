@@ -12,21 +12,5 @@ permissions:
 
 jobs:
   action:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          registry-url: 'https://registry.npmjs.org'
-      - name: Generate PR release version
-        run: npx --package=@aurodesignsystem/auro-cli -- auro pr-release -p ${{ github.event.pull_request.number }}
-
-      # Ensure npm 11.5.1 or later is installed
-      - name: Update npm
-        run: npm install -g npm@latest
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm run test
-      - run: npm publish --tag pr --provenance
+    uses: AlaskaAirlines/auro-actions/.github/workflows/pull-request.yml@dev
+    secrets: inherit
