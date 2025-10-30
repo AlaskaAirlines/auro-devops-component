@@ -47,7 +47,8 @@
     "last 2 Safari major versions"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "keywords": [
     "alaska airlines",
