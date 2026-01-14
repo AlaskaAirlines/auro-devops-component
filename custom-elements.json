@@ -1582,7 +1582,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "11.4.0",
+            "name": "12.3.0",
             "module": "src/buttonVersion.js"
           }
         }
@@ -1597,7 +1597,7 @@
           "kind": "js",
           "name": "default",
           "declaration": {
-            "name": "8.1.4",
+            "name": "9.1.0",
             "module": "src/iconVersion.js"
           }
         }
