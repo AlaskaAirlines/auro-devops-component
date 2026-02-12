@@ -6,4 +6,4 @@ on:
 
 jobs:
   action:
-    uses: AlaskaAirlines/auro-actions/.github/workflows/sync-tags.yml@main
+    uses: AlaskaAirlines/auro-actions/.github/workflows/sync-tags.yml@dev

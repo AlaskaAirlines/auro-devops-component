@@ -8,4 +8,4 @@ on:
 
 jobs:
   action:
-    uses: AlaskaAirlines/auro-actions/.github/workflows/check-pr.yml@main
+    uses: AlaskaAirlines/auro-actions/.github/workflows/check-pr.yml@dev
