@@ -1,7 +1,0 @@
-name: RC Automated PR Workflow
-on:
-  workflow_dispatch:
-
-jobs:
-  action:
-    uses: AlaskaAirlines/auro-actions/.github/workflows/rc-pr.yml@dev
