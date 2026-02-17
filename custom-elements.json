@@ -1,0 +1,1628 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "scripts/wca/auro-slideshow.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "AuroSlideshowWCA",
+          "superclass": {
+            "name": "AuroSlideshow",
+            "module": "/src/auro-slideshow.js"
+          },
+          "tagName": "auro-slideshow",
+          "customElement": true,
+          "slots": [
+            {
+              "description": "Default slot for the slides. Each child element will be treated as a slide.",
+              "name": "",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            }
+          ],
+          "cssParts": [
+            {
+              "description": "Use to style the next button control.",
+              "name": "next-button",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "description": "Use to style the play/pause button control.",
+              "name": "play-pause-button",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "description": "Use to style the previous button control.",
+              "name": "prev-button",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "autoplay",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will play automatically.",
+              "default": "false",
+              "fieldName": "autoplay",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "autoScroll",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will scroll continuously.",
+              "default": "false",
+              "fieldName": "autoScroll",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "description": "Slide duration in milliseconds. (Only used with `autoplay`)",
+              "default": "7000",
+              "fieldName": "delay",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "fullBleed",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If set, the slideshow will take up the width of its parent container showing previous and next slides. **Note:** a parent container must have `overflow-x: hidden` to prevent horizontal scrolling.",
+              "default": "false",
+              "fieldName": "fullBleed",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "isPlaying",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "isPlaying",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "loop",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will loop back to the first slide after reaching the last slide.",
+              "default": "false",
+              "fieldName": "loop",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "navigation",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display navigation arrows for previous and next slides when the slide container is hovered.",
+              "default": "false",
+              "fieldName": "navigation",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "pagination",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display pagination dots for each slide. If autoplay is on, the active dot will also show a progress bar.",
+              "default": "false",
+              "fieldName": "pagination",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "pauseLabel",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the pause button.",
+              "default": "\"Pause slideshow\"",
+              "fieldName": "pauseLabel",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "playLabel",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the play button.",
+              "default": "\"Play slideshow\"",
+              "fieldName": "playLabel",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "playOnInit",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will start playing automatically on page load when `autoplay` or `autoScroll` are on.",
+              "default": "false",
+              "fieldName": "playOnInit",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "scrollSpeed",
+              "type": {
+                "text": "number"
+              },
+              "description": "Number of pixels auto scroll should advance per frame. (Only used with `autoScroll`)",
+              "default": "0.75",
+              "fieldName": "scrollSpeed",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "name": "startDelay",
+              "type": {
+                "text": "number"
+              },
+              "description": "Delay in milliseconds before the auto scroll starts. (Only used with `autoScroll`)",
+              "default": "1000",
+              "fieldName": "startDelay",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_createWidthProp",
+              "description": "Calculate the width of the slideshow-wrapper and attach a css property to the host element '--slideshow-width'",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_customAlign",
+              "description": "Calculate the difference between the left edge of the slideshow-wrapper and the embla container",
+              "return": {
+                "type": {
+                  "text": ""
+                }
+              },
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_dotsNode",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_nextBtn",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_playBtn",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_prevBtn",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_progressNode",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_slideshowPaddingSize",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_slideshowWrapperNode",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_slot",
+              "readonly": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "addAutoplayProgressListeners",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "addDotBtnsAndClickHandlers",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "autoplay",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will play automatically.",
+              "default": "false",
+              "attribute": "autoplay",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "autoScroll",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will scroll continuously.",
+              "default": "false",
+              "attribute": "autoScroll",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "buttonTag",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "delay",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "Slide duration in milliseconds. (Only used with `autoplay`)",
+              "default": "7000",
+              "attribute": "delay",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "embla",
+              "type": {
+                "text": "null"
+              },
+              "privacy": "private",
+              "default": "null",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "fullBleed",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If set, the slideshow will take up the width of its parent container showing previous and next slides. **Note:** a parent container must have `overflow-x: hidden` to prevent horizontal scrolling.",
+              "default": "false",
+              "attribute": "fullBleed",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "generateIconHtml",
+              "parameters": [
+                {
+                  "name": "svgContent",
+                  "description": "The SVG content to be embedded.",
+                  "type": {
+                    "text": "string"
+                  }
+                },
+                {
+                  "name": "hideIcon",
+                  "description": "Whether the icon should be hidden",
+                  "type": {
+                    "text": "boolean"
+                  }
+                }
+              ],
+              "description": "Internal function to generate the HTML for the icon to use.",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Element"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "handleKeydown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "description": "The keydown event triggered by the user.\nAllows users to navigate through the slideshow using left/right arrow keys.",
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "handleMouseEnter",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "handleMouseLeave",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleNavClick",
+              "parameters": [
+                {
+                  "name": "direction",
+                  "description": "The direction of the navigation (\"prev\" or \"next\").\nHandles click events on the previous and next buttons.",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayClick",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "iconTag",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "initializeEmbla",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isHovered",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isPlaying",
+              "privacy": "private",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "isPlaying",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isStopped",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "true",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "isTouchDevice",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "loop",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will loop back to the first slide after reaching the last slide.",
+              "default": "false",
+              "attribute": "loop",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "navigation",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display navigation arrows for previous and next slides when the slide container is hovered.",
+              "default": "false",
+              "attribute": "navigation",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "pagination",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display pagination dots for each slide. If autoplay is on, the active dot will also show a progress bar.",
+              "default": "false",
+              "attribute": "pagination",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "pauseLabel",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the pause button.",
+              "default": "\"Pause slideshow\"",
+              "attribute": "pauseLabel",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "play",
+              "description": "Starts the slideshow playback.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "playBtnLabel",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "playLabel",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the play button.",
+              "default": "\"Play slideshow\"",
+              "attribute": "playLabel",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "playOnInit",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will start playing automatically on page load when `autoplay` or `autoScroll` are on.",
+              "default": "false",
+              "attribute": "playOnInit",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "register",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "name",
+                  "default": "\"auro-slideshow\"",
+                  "description": "Custom element name to register.",
+                  "optional": true,
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Registers the custom element with the browser.",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderNavigationControls",
+              "description": "Generates the HTML for the navigation controls (previous and next buttons).",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Element"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderPaginationContainer",
+              "description": "Generates the HTML for the pagination container, which includes the play button and pagination dots.\nIf autoplay or autoScroll is enabled, it will render the play button.\nIf pagination is enabled, it will render the dots.",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderPlayButton",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "scrollNext",
+              "description": "Scrolls to the next slide.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "scrollPrev",
+              "description": "Scrolls to the previous slide.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "scrollSpeed",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "Number of pixels auto scroll should advance per frame. (Only used with `autoScroll`)",
+              "default": "0.75",
+              "attribute": "scrollSpeed",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "slides",
+              "type": {
+                "text": "array"
+              },
+              "privacy": "private",
+              "default": "[]",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "startDelay",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "Delay in milliseconds before the auto scroll starts. (Only used with `autoScroll`)",
+              "default": "1000",
+              "attribute": "startDelay",
+              "reflects": true,
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "stop",
+              "description": "Stops the slideshow playback.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "stopOnInteraction",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "toggleNavBtnsState",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "togglePlayButtonOnPlay",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "togglePlayButtonOnStop",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "toggleTabIndex",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updateSlides",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "AuroSlideshow",
+                "module": "src/auro-slideshow.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "auro-slideshow",
+          "declaration": {
+            "name": "AuroSlideshowWCA",
+            "module": "scripts/wca/auro-slideshow.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/auro-slideshow.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The auro-slideshow component is a customizable slideshow that displays a series of slides\nwith several options such as autoplay, navigation controls, and pagination dots.",
+          "name": "AuroSlideshow",
+          "cssParts": [
+            {
+              "description": "Use to style the next button control.",
+              "name": "next-button"
+            },
+            {
+              "description": "Use to style the play/pause button control.",
+              "name": "play-pause-button"
+            },
+            {
+              "description": "Use to style the previous button control.",
+              "name": "prev-button"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Default slot for the slides. Each child element will be treated as a slide.",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "_createWidthProp",
+              "description": "Calculate the width of the slideshow-wrapper and attach a css property to the host element '--slideshow-width'",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_customAlign",
+              "description": "Calculate the difference between the left edge of the slideshow-wrapper and the embla container",
+              "return": {
+                "type": {
+                  "text": ""
+                }
+              },
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_dotsNode",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_nextBtn",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_playBtn",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_prevBtn",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_progressNode",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_slideshowPaddingSize",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_slideshowWrapperNode",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "_slot",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "addAutoplayProgressListeners",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "addDotBtnsAndClickHandlers",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "autoplay",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will play automatically.",
+              "default": "false",
+              "attribute": "autoplay",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "autoScroll",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will scroll continuously.",
+              "default": "false",
+              "attribute": "autoScroll",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "buttonTag",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "delay",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "Slide duration in milliseconds. (Only used with `autoplay`)",
+              "default": "7000",
+              "attribute": "delay",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "embla",
+              "type": {
+                "text": "null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "fullBleed",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If set, the slideshow will take up the width of its parent container showing previous and next slides. **Note:** a parent container must have `overflow-x: hidden` to prevent horizontal scrolling.",
+              "default": "false",
+              "attribute": "fullBleed",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "generateIconHtml",
+              "parameters": [
+                {
+                  "name": "svgContent",
+                  "description": "The SVG content to be embedded.",
+                  "type": {
+                    "text": "string"
+                  }
+                },
+                {
+                  "name": "hideIcon",
+                  "description": "Whether the icon should be hidden",
+                  "type": {
+                    "text": "boolean"
+                  }
+                }
+              ],
+              "description": "Internal function to generate the HTML for the icon to use.",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Element"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "handleKeydown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "description": "The keydown event triggered by the user.\nAllows users to navigate through the slideshow using left/right arrow keys.",
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "handleMouseEnter",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "handleMouseLeave",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleNavClick",
+              "parameters": [
+                {
+                  "name": "direction",
+                  "description": "The direction of the navigation (\"prev\" or \"next\").\nHandles click events on the previous and next buttons.",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handlePlayClick",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "iconTag",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "initializeEmbla",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "isHovered",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "isPlaying",
+              "privacy": "private",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "isPlaying"
+            },
+            {
+              "kind": "field",
+              "name": "isStopped",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "true"
+            },
+            {
+              "kind": "method",
+              "name": "isTouchDevice",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "boolean"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "loop",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will loop back to the first slide after reaching the last slide.",
+              "default": "false",
+              "attribute": "loop",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "navigation",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display navigation arrows for previous and next slides when the slide container is hovered.",
+              "default": "false",
+              "attribute": "navigation",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pagination",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display pagination dots for each slide. If autoplay is on, the active dot will also show a progress bar.",
+              "default": "false",
+              "attribute": "pagination",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "pauseLabel",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the pause button.",
+              "default": "\"Pause slideshow\"",
+              "attribute": "pauseLabel",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "play",
+              "description": "Starts the slideshow playback.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "playBtnLabel",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "playLabel",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the play button.",
+              "default": "\"Play slideshow\"",
+              "attribute": "playLabel",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "playOnInit",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will start playing automatically on page load when `autoplay` or `autoScroll` are on.",
+              "default": "false",
+              "attribute": "playOnInit",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "register",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "name",
+                  "default": "\"auro-slideshow\"",
+                  "description": "Custom element name to register.",
+                  "optional": true,
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Registers the custom element with the browser."
+            },
+            {
+              "kind": "method",
+              "name": "renderNavigationControls",
+              "description": "Generates the HTML for the navigation controls (previous and next buttons).",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Element"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderPaginationContainer",
+              "description": "Generates the HTML for the pagination container, which includes the play button and pagination dots.\nIf autoplay or autoScroll is enabled, it will render the play button.\nIf pagination is enabled, it will render the dots.",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "renderPlayButton",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "scrollNext",
+              "description": "Scrolls to the next slide.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "scrollPrev",
+              "description": "Scrolls to the previous slide.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "scrollSpeed",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "Number of pixels auto scroll should advance per frame. (Only used with `autoScroll`)",
+              "default": "0.75",
+              "attribute": "scrollSpeed",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slides",
+              "type": {
+                "text": "array"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "startDelay",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "description": "Delay in milliseconds before the auto scroll starts. (Only used with `autoScroll`)",
+              "default": "1000",
+              "attribute": "startDelay",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "stop",
+              "description": "Stops the slideshow playback.",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "stopOnInteraction",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "toggleNavBtnsState",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "togglePlayButtonOnPlay",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "togglePlayButtonOnStop",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "toggleTabIndex",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "updateSlides",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "autoplay",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will play automatically.",
+              "default": "false",
+              "fieldName": "autoplay"
+            },
+            {
+              "name": "autoScroll",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will scroll continuously.",
+              "default": "false",
+              "fieldName": "autoScroll"
+            },
+            {
+              "name": "delay",
+              "type": {
+                "text": "number"
+              },
+              "description": "Slide duration in milliseconds. (Only used with `autoplay`)",
+              "default": "7000",
+              "fieldName": "delay"
+            },
+            {
+              "name": "fullBleed",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If set, the slideshow will take up the width of its parent container showing previous and next slides. **Note:** a parent container must have `overflow-x: hidden` to prevent horizontal scrolling.",
+              "default": "false",
+              "fieldName": "fullBleed"
+            },
+            {
+              "name": "isPlaying",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "isPlaying"
+            },
+            {
+              "name": "loop",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will loop back to the first slide after reaching the last slide.",
+              "default": "false",
+              "fieldName": "loop"
+            },
+            {
+              "name": "navigation",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display navigation arrows for previous and next slides when the slide container is hovered.",
+              "default": "false",
+              "fieldName": "navigation"
+            },
+            {
+              "name": "pagination",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will display pagination dots for each slide. If autoplay is on, the active dot will also show a progress bar.",
+              "default": "false",
+              "fieldName": "pagination"
+            },
+            {
+              "name": "pauseLabel",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the pause button.",
+              "default": "\"Pause slideshow\"",
+              "fieldName": "pauseLabel"
+            },
+            {
+              "name": "playLabel",
+              "type": {
+                "text": "string"
+              },
+              "description": "The aria-label for the play button.",
+              "default": "\"Play slideshow\"",
+              "fieldName": "playLabel"
+            },
+            {
+              "name": "playOnInit",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "If true, the slideshow will start playing automatically on page load when `autoplay` or `autoScroll` are on.",
+              "default": "false",
+              "fieldName": "playOnInit"
+            },
+            {
+              "name": "scrollSpeed",
+              "type": {
+                "text": "number"
+              },
+              "description": "Number of pixels auto scroll should advance per frame. (Only used with `autoScroll`)",
+              "default": "0.75",
+              "fieldName": "scrollSpeed"
+            },
+            {
+              "name": "startDelay",
+              "type": {
+                "text": "number"
+              },
+              "description": "Delay in milliseconds before the auto scroll starts. (Only used with `autoScroll`)",
+              "default": "1000",
+              "fieldName": "startDelay"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AuroSlideshow",
+          "declaration": {
+            "name": "AuroSlideshow",
+            "module": "src/auro-slideshow.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/buttonVersion.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "12.3.0",
+            "module": "src/buttonVersion.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/iconVersion.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "9.1.0",
+            "module": "src/iconVersion.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AuroSlideshow",
+          "declaration": {
+            "name": "AuroSlideshow",
+            "module": "src/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/registered.js",
+      "declarations": [],
+      "exports": []
+    }
+  ]
+}
